@@ -71,7 +71,7 @@
 아나콘다 가상 환경(`voice_env` 또는 당신이 지정한 이름)이 활성화된 상태에서 다음 명령어를 실행하여 음성 비서 프로그램을 시작합니다.
 
 ```bash
-python main_realtime_quicksilence.py
+python main.py
 ````
 
 프로그램이 시작되면 콘솔 창에 다음과 같은 안내 메시지가 출력됩니다.
