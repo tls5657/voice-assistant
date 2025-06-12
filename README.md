@@ -61,12 +61,6 @@
     ```bash
     pip install -r requirements.txt
     ```
-    * **참고:** `pyaudio` 설치 중 오류가 발생할 수 있습니다. 특히 Windows 환경에서는 `pipwin`을 사용하여 설치하는 것이 도움이 될 수 있습니다.
-        ```bash
-        pip install pipwin
-        pipwin install pyaudio
-        ```
-        이후 `pip install -r requirements.txt`를 다시 시도하면 됩니다.
     * **Whisper 모델:** `openai-whisper` 라이브러리는 프로그램 최초 실행 시 `small` 크기의 한국어 모델을 자동으로 다운로드합니다. 이 과정에서 인터넷 연결이 필요하며, 모델 크기에 따라 약간의 시간이 소요될 수 있습니다.
 
 ## 🎮 사용 방법
