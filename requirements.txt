@@ -1,0 +1,7 @@
+speechrecognition
+openai-whisper
+pyaudio
+pycaw
+comtypes
+urllib3
+soundfile
