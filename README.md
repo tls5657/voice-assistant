@@ -1,14 +1,8 @@
-네, 요청하신 내용을 Markdown 문법으로 작성해 드리겠습니다. `README.md` 파일에 그대로 복사하여 붙여넣으시면 됩니다.
-
-````markdown
 # 🤖 실시간 음성 비서 (Realtime Voice Assistant for Windows)
 
 이 프로젝트는 Python을 기반으로, Whisper ASR (자동 음성 인식) 모델을 사용하여 실시간으로 사용자 음성 명령을 인식하고
 Windows 시스템에서 다양한 작업을 수행하는 인공지능 비서 프로그램입니다.
 음성 끝맺음 후 1초간 침묵을 감지하면 즉시 명령을 처리하여 빠른 응답성을 제공합니다.
-
-![Voice Assistant Demo Image - Replace with an actual screenshot or GIF later if possible](https://via.placeholder.com/600x300?text=Voice+Assistant+Demo)
-*(나중에 실제 동작 화면 스크린샷이나 GIF 이미지로 교체하면 좋습니다.)*
 
 ## ✨ 주요 기능
 
