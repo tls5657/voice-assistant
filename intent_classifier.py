@@ -8,7 +8,6 @@ def classify_intent(text: str) -> dict:
     ASR(음성→텍스트) 결과 text를 받아서, 다음을 리턴합니다:
       {
         "intent": "EXIT"            # 프로그램 종료
-                | "SET_TIMER"         # 타이머 설정
                 | "VOLUME_UP"         # 볼륨 높이기
                 | "VOLUME_DOWN"       # 볼륨 낮추기
                 | "OPEN_CALCULATOR"   # 계산기 실행
@@ -26,12 +25,6 @@ def classify_intent(text: str) -> dict:
     # 1) 종료 의도
     if any(w in text for w in ["종료", "그만", "끝내"]):
         return {"intent": "EXIT", "parameter": None}
-
-    # 2) 타이머 설정 (예: "5분 타이머 설정해줘", "10분짜리 타이머")
-    m_timer = re.search(r"(\d+)\s*분(?:짜리)?\s*타이머", text)
-    if m_timer:
-        minutes = int(m_timer.group(1))
-        return {"intent": "SET_TIMER", "parameter": minutes}
 
     # 3) 볼륨 높이기 (예: "볼륨 높여줘", "소리 올려줘")
     if any(w in text for w in ["볼륨", "소리"]) and any(w in text for w in ["높여", "올려", "높이"]):
