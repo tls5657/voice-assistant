@@ -107,7 +107,7 @@ python main.py
 
 ## ⚙️ 구성 파일
 
-  * `main_realtime_quicksilence.py`: 메인 실행 파일. 마이크 입력 처리, Whisper ASR 연동, 명령 처리 로직을 포함합니다.
+  * `main.py`: 메인 실행 파일. 마이크 입력 처리, Whisper ASR 연동, 명령 처리 로직을 포함합니다.
   * `intent_classifier.py`: 음성 인식 결과를 기반으로 사용자의 의도(intent)와 파라미터(parameter)를 분류하는 모듈.
   * `requirements.txt`: 프로젝트 실행에 필요한 Python 라이브러리 목록.
 
