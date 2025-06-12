@@ -34,7 +34,7 @@
     터미널 또는 Anaconda Prompt를 열고 다음 명령어를 사용하여 프로젝트를 로컬 컴퓨터로 복제합니다.
 
     ```bash
-    git clone [https://github.com/tls5657/voice-assistant.git](https://github.com/tls5657/voice-assistant.git)
+    git clone https://github.com/tls5657/voice-assistant.git
     ```
 
 2.  **프로젝트 디렉토리로 이동:**
