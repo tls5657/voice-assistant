@@ -59,19 +59,6 @@ def adjust_volume(delta: float):
     new = min(max(current + delta, 0.0), 1.0)
     volume.SetMasterVolumeLevelScalar(new, None)
 
-
-# ========================================
-# 3) 타이머 스레드 함수
-# ========================================
-def timer_thread(minutes: int):
-    """
-    백그라운드에서 countdown 후 콘솔에 알림 출력.
-    """
-    seconds = minutes * 60
-    time.sleep(seconds)
-    print(f"\n▶ 🕑 {minutes}분 타이머가 종료되었습니다! ▶ 알림")
-
-
 # ========================================
 # 4) 명령 처리 함수
 # ========================================
@@ -89,38 +76,31 @@ def handle_intent(text: str) -> bool:
         print("▶ 종료 명령을 감지했습니다. 프로그램을 종료합니다.")
         return False
 
-    # 2) 타이머 설정
-    if intent == "SET_TIMER":
-        minutes = param
-        print(f"▶ {minutes}분 타이머를 설정합니다.")
-        threading.Thread(target=timer_thread, args=(minutes,), daemon=True).start()
-        return True
-
-    # 3) 볼륨 높이기
+    # 2) 볼륨 높이기
     if intent == "VOLUME_UP":
         print("▶ 볼륨을 10% 높입니다.")
         adjust_volume(+0.1)
         return True
 
-    # 4) 볼륨 낮추기
+    # 3) 볼륨 낮추기
     if intent == "VOLUME_DOWN":
         print("▶ 볼륨을 10% 낮춥니다.")
         adjust_volume(-0.1)
         return True
 
-    # 5) 계산기 실행
+    # 4) 계산기 실행
     if intent == "OPEN_CALCULATOR":
         print("▶ 계산기를 엽니다...")
         subprocess.Popen(["calc.exe"])
         return True
 
-    # 6) 메모장 실행
+    # 5) 메모장 실행
     if intent == "OPEN_NOTEPAD":
         print("▶ 메모장을 엽니다...")
         subprocess.Popen(["notepad.exe"])
         return True
 
-    # 7) 유튜브 검색
+    # 6) 유튜브 검색
     if intent == "SEARCH_YOUTUBE":
         import urllib.parse
         query = urllib.parse.unquote(param)
@@ -128,7 +108,7 @@ def handle_intent(text: str) -> bool:
         webbrowser.open(f"https://www.youtube.com/results?search_query={param}")
         return True
 
-    # 8) 구글 검색
+    # 7) 구글 검색
     if intent == "SEARCH_GOOGLE":
         import urllib.parse
         query = urllib.parse.unquote(param)
@@ -136,7 +116,7 @@ def handle_intent(text: str) -> bool:
         webbrowser.open(f"https://www.google.com/search?q={param}")
         return True
 
-    # 9) 네이버 검색
+    # 8) 네이버 검색
     if intent == "SEARCH_NAVER":
         import urllib.parse
         query = urllib.parse.unquote(param)
@@ -201,7 +181,6 @@ def main():
     print("  • 발화 후 1초(=pause_threshold) 동안 침묵이 감지되면 즉시 인식합니다.")
     print("  • 예: '계산기 열어줘'라고 말하고 1초간 아무 말 없으면 바로 계산기 실행")
     print("  • '종료', '그만', '끝내' 등을 말하면 프로그램이 종료됩니다.")
-    print("  • '○분 타이머 설정해줘' → 바로 타이머 설정")
     print("  • '볼륨 높여줘', '볼륨 낮춰줘' → 바로 볼륨 제어")
     print("  • '계산기 열어줘' → 바로 계산기 실행")
     print("  • '메모장 열어줘' → 바로 메모장 실행")
