@@ -31,7 +31,7 @@
 ### 📦 설치 방법
 
 1.  **프로젝트 복제 (Clone):**
-    터미널 또는 Anaconda Prompt를 열고 다음 명령어를 사용하여 프로젝트를 로컬 컴퓨터로 복제합니다.
+    Anaconda Prompt를 열고 다음 명령어를 사용하여 프로젝트를 로컬 컴퓨터로 복제합니다.
 
     ```bash
     git clone https://github.com/tls5657/voice-assistant.git
@@ -54,19 +54,6 @@
     * **참고:** `conda create` 시 Python 버전을 명시하는 것이 좋습니다. 여기서는 `3.9`를 예시로 들었습니다.
     * **Anaconda Prompt 사용:** 아나콘다 가상 환경 관련 명령어(`conda activate`, `conda create`)는 일반 터미널(명령 프롬프트)이 아닌, 아나콘다 설치 시 함께 설치되는 **"Anaconda Prompt"**를 사용하는 것이 가장 안정적입니다.
 
-    #### **옵션 2: 기본 Python `venv` 모듈 사용 시 (Anaconda 미설치자)**
-
-    ```bash
-    python -m venv venv
-    ```
-    * **Windows:**
-        ```bash
-        .\venv\Scripts\activate
-        ```
-    * **macOS / Linux:**
-        ```bash
-        source venv/bin/activate
-        ```
         
 4.  **필요한 라이브러리 설치:**
     가상 환경이 활성화된 상태에서 프로젝트에 필요한 모든 Python 라이브러리들을 `requirements.txt` 파일을 통해 설치합니다.
