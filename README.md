@@ -42,16 +42,32 @@
     ```bash
     cd voice-assistant
     ```
-
-3.  **아나콘다 가상 환경 생성 및 활성화 (권장):**
+3.  **가상 환경 생성 및 활성화 (권장):**
     프로젝트별로 독립적인 파이썬 환경을 구성하여 라이브러리 충돌을 방지합니다.
+
+    #### **옵션 1: Anaconda 또는 Miniconda 사용 시**
 
     ```bash
     conda create -n voice_env python=3.9  # 'voice_env'는 원하는 가상 환경 이름, python=3.9는 권장 버전
     conda activate voice_env
     ```
     * **참고:** `conda create` 시 Python 버전을 명시하는 것이 좋습니다. 여기서는 `3.9`를 예시로 들었습니다.
+    * **Anaconda Prompt 사용:** 아나콘다 가상 환경 관련 명령어(`conda activate`, `conda create`)는 일반 터미널(명령 프롬프트)이 아닌, 아나콘다 설치 시 함께 설치되는 **"Anaconda Prompt"**를 사용하는 것이 가장 안정적입니다.
 
+    #### **옵션 2: 기본 Python `venv` 모듈 사용 시 (Anaconda 미설치자)**
+
+    ```bash
+    python -m venv venv
+    ```
+    * **Windows:**
+        ```bash
+        .\venv\Scripts\activate
+        ```
+    * **macOS / Linux:**
+        ```bash
+        source venv/bin/activate
+        ```
+        
 4.  **필요한 라이브러리 설치:**
     가상 환경이 활성화된 상태에서 프로젝트에 필요한 모든 Python 라이브러리들을 `requirements.txt` 파일을 통해 설치합니다.
 
