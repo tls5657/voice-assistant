@@ -117,7 +117,3 @@ python main.py
 
 -----
 
-**아나콘다 사용자를 위한 추가 팁:**
-
-  * **Anaconda Prompt 사용:** 아나콘다 가상 환경 관련 명령어(`conda activate`, `conda create`)는 일반 터미널(명령 프롬프트)이 아닌, 아나콘다 설치 시 함께 설치되는 \*\*"Anaconda Prompt"\*\*를 사용하는 것이 가장 안정적입니다.
-  * **PyAudio 문제:** `pyaudio`는 파이썬 버전에 따라 바이너리 설치가 까다로울 수 있습니다. `pipwin`을 통한 설치 방법이 대부분의 경우 효과적입니다.
