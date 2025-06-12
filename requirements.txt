@@ -5,3 +5,4 @@ pycaw
 comtypes
 urllib3
 soundfile
+librosa
